@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'home/index'
+
   root 'bucketlist#index'
   get 'bucketlist/index'
   post '/write' => 'bucketlist#write'
