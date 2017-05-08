@@ -1,0 +1,10 @@
+<div class = "container">
+<% @everyfoodinfo.each do |p| %>
+<div class="well">...
+<%= p.title %><br>
+<%= p.title2 %><br>
+<%= p.content %><hr>
+<a href = "/destroy3/<%= p.id %>">[삭제]</a>
+<a href = "/update_view3/<%= p.id %>">[수정]</a>
+</div>
+<% end %>

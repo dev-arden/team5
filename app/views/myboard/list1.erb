@@ -1,0 +1,25 @@
+<div class="container">
+<%  @everymypost.each do |p| %>
+<div class="well">
+<%= p.title %><br>
+<%= p.writer %><br> 
+<%= p.content %><hr>
+
+<% p.replies.each do |r|%>
+<p><%= r.content %></p>
+<% end %>
+
+<form action = "/reply_write" method = "POST">
+  <input type="hidden" name="mypost_id" value="<%=p.id%>">
+    <div class="form-group">
+      <textarea class="form-control" name = "content1" rows = "3" cols = "50"></textarea>
+    </div>
+    
+    <button type="submit" class="btn btn-default">
+      <span class="glyphicon glyphicon-pencil" aria-hidden="true">댓글 남기기</span>
+    </button>
+  </form>
+<a href="/update_view1/<%= p.id %>">[수정]</a>
+<a href="/destroy1/<%= p.id %>">[삭제]</a>
+</div>
+<% end %>

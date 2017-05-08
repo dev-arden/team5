@@ -1,0 +1,14 @@
+<div class="container">
+<div class="animal">
+<h1>동물을 사랑하는 사자들의 모임</h1>
+<form action = "/update2/<%= @one_animalinfo.id %>" method = "POST">
+    <div class="form-group">
+    <h3><동물의 이름이 무엇인가요?></h3><input type ="text" name = "text2"></input><br>
+    <h3><동물의 특징이 무엇인가요?></h3><textarea name = "content2" rows = "15" cols = "20"><%= @one_animalinfo.title%><%= @one_animalinfo.content%></textarea><br>
+   <button type="submit" class="btn btn-default">
+      <span class="glyphicon glyphicon-ok" aria-hidden="true">작성완료</span>
+    </button>
+</form><hr>
+</div>
+
+

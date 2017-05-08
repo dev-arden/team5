@@ -1,0 +1,9 @@
+<div class = "container">
+<% @everybestmovie.each do |p| %>
+<div class="well">...
+<%= p.title %><br>
+<%= p.content %><hr>
+<a href = "/destroy4/<%= p.id %>">[삭제]</a>
+<a href = "/update_view4/<%= p.id %>">[수정]</a>
+</div>
+<% end %>

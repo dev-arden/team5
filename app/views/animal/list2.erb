@@ -1,0 +1,9 @@
+<div class = "container">
+<% @everyanimalinfo.each do |p| %>
+<div class="well">...
+<%= p.title %><br>
+<%= p.content %><hr>
+<a href = "/destroy2/<%= p.id %>">[삭제]</a>
+<a href = "/update_view2/<%= p.id %>">[수정]</a>
+</div>
+<% end %>

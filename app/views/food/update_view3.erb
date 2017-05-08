@@ -1,0 +1,15 @@
+<div class="container">
+<h1>음식을 사랑하는 사자들의 모임</h1>
+<form action = "/update3/<%= @one_foodinfo.id %>" method = "POST">
+    <div class="form-group">
+    <h3>음식의 이름은 무엇인가요?</h3><input name = "text3" type = "text"></input>
+    <h3>음식의 칼로리는 얼마입니까?</h3><input name = "text33" type = "text"></input>
+    <h3>음식에 대해 할 말이 있나요?</h3><textarea name = "content3" rows = "15" cols = "50"><%= @one_foodinfo.content %></textarea><br>
+     </div>
+    <button type="submit" class="btn btn-default">
+      <span class="glyphicon glyphicon-ok-circle" aria-hidden="true">제출완료</span>
+    </button>
+</form><hr>
+</div>
+
+

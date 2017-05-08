@@ -1,0 +1,9 @@
+<div class = "container">
+<% @everybucket.each do |p| %>
+<div class="well">...
+<%= p.title %><br>
+<%= p.content %><br>
+<a href = "/destroy/<%= p.id %>">[삭제]</a>
+<a href = "/update_view/<%= p.id %>">[수정]</a>
+</div>
+<% end %>
